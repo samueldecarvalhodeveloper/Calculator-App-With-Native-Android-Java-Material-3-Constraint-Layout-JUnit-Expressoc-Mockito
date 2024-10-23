@@ -8,7 +8,7 @@ public class CalculatorSpecifications {
     private CalculatorSpecifications() {
     }
 
-    public static boolean isCalculationResultARationalNumber(double evaluatedCalculationExpression) {
+    public static boolean isCalculationExpressionRationalNumber(double evaluatedCalculationExpression) {
         return evaluatedCalculationExpression != (int) evaluatedCalculationExpression;
     }
 

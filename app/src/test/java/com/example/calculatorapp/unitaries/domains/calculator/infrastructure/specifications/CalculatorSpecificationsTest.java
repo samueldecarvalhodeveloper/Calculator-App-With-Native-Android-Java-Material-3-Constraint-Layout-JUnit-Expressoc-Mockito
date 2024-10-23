@@ -6,7 +6,7 @@ import static com.example.calculatorapp.constants.domains.CalculatorConstants.RA
 import static com.example.calculatorapp.constants.domains.CalculatorConstants.SIMPLE_CALCULATION_EXPRESSION;
 import static com.example.calculatorapp.domains.calculator.infrastructure.specifications.CalculatorSpecifications.isCalculationExpressionEmpty;
 import static com.example.calculatorapp.domains.calculator.infrastructure.specifications.CalculatorSpecifications.isCalculationExpressionNotValidExpressionExceptionMessage;
-import static com.example.calculatorapp.domains.calculator.infrastructure.specifications.CalculatorSpecifications.isCalculationResultARationalNumber;
+import static com.example.calculatorapp.domains.calculator.infrastructure.specifications.CalculatorSpecifications.isCalculationExpressionRationalNumber;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -14,9 +14,9 @@ import org.junit.Test;
 
 public class CalculatorSpecificationsTest {
     @Test
-    public void testIfMethodIsCalculationResultARationalNumberReturnsTrueIfNumberIsAFloatingNumber() {
-        boolean rationalNumber = isCalculationResultARationalNumber(RATIONAL_NUMBER);
-        boolean notRationalNumber = isCalculationResultARationalNumber(NOT_RATIONAL_NUMBER);
+    public void testIfMethodIsCalculationExpressionRationalNumberReturnsTrueIfNumberIsAFloatingNumber() {
+        boolean rationalNumber = isCalculationExpressionRationalNumber(RATIONAL_NUMBER);
+        boolean notRationalNumber = isCalculationExpressionRationalNumber(NOT_RATIONAL_NUMBER);
 
         assertTrue(rationalNumber);
         assertFalse(notRationalNumber);

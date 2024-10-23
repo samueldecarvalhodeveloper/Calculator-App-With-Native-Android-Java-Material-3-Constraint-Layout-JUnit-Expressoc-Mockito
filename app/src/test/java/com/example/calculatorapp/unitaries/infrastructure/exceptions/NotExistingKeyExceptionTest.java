@@ -1,6 +1,5 @@
 package com.example.calculatorapp.unitaries.infrastructure.exceptions;
 
-
 import static com.example.calculatorapp.constants.UserInterfaceConstants.LAST_SESSION_CALCULATION_EXPRESSION_KEY;
 import static com.example.calculatorapp.constants.UserInterfaceConstants.NOT_EXISTING_KEY_EXCEPTION_MESSAGE;
 import static org.junit.Assert.assertEquals;

@@ -8,7 +8,6 @@ public class UserInterfaceConstants {
     public static final String BOOLEAN_VALUE_KEY = "booleankey";
     public static final int ANY_VIEW_ID = 0;
     public static final String THEME_KEY = "theme";
-    public static int VIEWFINDER_VALUE_TEXTVIEW_WIDTH = 10000000;
 
     private UserInterfaceConstants() {
     }

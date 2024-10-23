@@ -20,9 +20,9 @@ public class CalculationExpressionRegister {
 
     public void addCharacterToCalculationExpression(CalculatorCharacters calculatorCharacters) {
         String currentCalculationExpression = this.calculationExpression.getCalculationExpression();
-        String calculationResultWithNewCharacter =
+        String calculationExpressionWithNewCharacter =
                 currentCalculationExpression.concat(calculatorCharacters.value);
 
-        this.calculationExpression.setCalculationExpression(calculationResultWithNewCharacter);
+        this.calculationExpression.setCalculationExpression(calculationExpressionWithNewCharacter);
     }
 }
