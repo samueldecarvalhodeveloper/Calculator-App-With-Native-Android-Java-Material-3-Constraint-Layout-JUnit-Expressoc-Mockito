@@ -1,4 +1,4 @@
-package com.example.calculatorapp.main_activity_events;
+package com.example.calculatorapp.activity_events.main_activity;
 
 import static com.example.calculatorapp.infrastructure.specifications.UserInterfaceSpecifications.isMenuItemIdEqualToToggleNightModeMenuItem;
 

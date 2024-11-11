@@ -7,8 +7,8 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.calculatorapp.databinding.ActivityMainBinding;
-import com.example.calculatorapp.main_activity_events.MainActivityOnClickListenerEventHandler;
-import com.example.calculatorapp.main_activity_events.MainActivityOnMenuItemClickEventHandler;
+import com.example.calculatorapp.activity_events.main_activity.MainActivityOnClickListenerEventHandler;
+import com.example.calculatorapp.activity_events.main_activity.MainActivityOnMenuItemClickEventHandler;
 import com.example.calculatorapp.observer_setup_adapter.ObserverSetupAdapter;
 import com.example.calculatorapp.user_interface_theme_state_adapter.UserInterfaceThemeStateAdapter;
 import com.example.calculatorapp.view_models.CalculatorViewModel;
