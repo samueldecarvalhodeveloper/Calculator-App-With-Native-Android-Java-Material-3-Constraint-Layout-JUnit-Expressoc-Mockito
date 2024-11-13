@@ -2,11 +2,7 @@ package com.example.calculatorapp.constants;
 
 public class UserInterfaceConstants {
     public static final String LAST_SESSION_CALCULATION_EXPRESSION_KEY = "calculationexpression";
-    public static final String STRING_VALUE = "";
-    public static final Boolean BOOLEAN_VALUE = true;
-    public static final String STRING_VALUE_KEY = "stringkey";
-    public static final String BOOLEAN_VALUE_KEY = "booleankey";
-    public static final int ANY_VIEW_ID = 0;
+
     public static final String THEME_KEY = "theme";
 
     private UserInterfaceConstants() {

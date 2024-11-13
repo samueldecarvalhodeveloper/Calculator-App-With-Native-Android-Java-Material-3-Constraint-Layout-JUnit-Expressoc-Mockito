@@ -1,6 +1,6 @@
 package com.example.calculatorapp.infrastructure.anticorruption_layer;
 
-import static com.example.calculatorapp.constants.ApplicationConstants.APPLICATION_SHARED_PREFERENCES_NAME;
+import static com.example.calculatorapp.constants.ApplicationConstants.APPLICATION_KEY_VALUE_DATABASE_NAME;
 import static com.example.calculatorapp.infrastructure.specifications.UserInterfaceSpecifications.isKeyWithinMap;
 
 import android.content.Context;
@@ -14,7 +14,7 @@ public class KeyValueDatabase {
     }
 
     public static <T> T getValue(String key, Context context) throws NotExistingKeyException {
-        Map<String, ?> allStoredValue = context.getSharedPreferences(APPLICATION_SHARED_PREFERENCES_NAME, Context.MODE_PRIVATE)
+        Map<String, ?> allStoredValue = context.getSharedPreferences(APPLICATION_KEY_VALUE_DATABASE_NAME, Context.MODE_PRIVATE)
                 .getAll();
 
         if (isKeyWithinMap(key, allStoredValue)) {
@@ -25,14 +25,14 @@ public class KeyValueDatabase {
     }
 
     public static void setValue(String key, String value, Context context) {
-        context.getSharedPreferences(APPLICATION_SHARED_PREFERENCES_NAME, Context.MODE_PRIVATE)
+        context.getSharedPreferences(APPLICATION_KEY_VALUE_DATABASE_NAME, Context.MODE_PRIVATE)
                 .edit()
                 .putString(key, value)
                 .apply();
     }
 
     public static void setValue(String key, Boolean value, Context context) {
-        context.getSharedPreferences(APPLICATION_SHARED_PREFERENCES_NAME, Context.MODE_PRIVATE)
+        context.getSharedPreferences(APPLICATION_KEY_VALUE_DATABASE_NAME, Context.MODE_PRIVATE)
                 .edit()
                 .putBoolean(key, value)
                 .apply();
