@@ -5,6 +5,16 @@ public class UserInterfaceConstants {
 
     public static final String THEME_KEY = "theme";
 
+    public static final boolean BOOLEAN_VALUE = false;
+
+    public static final String BOOLEAN_VALUE_KEY = "mybooleanvalue";
+
+    public static final int ANY_VIEW_ID = 0;
+
+    public static final String STRING_VALUE = "1+1";
+
+    public static final String STRING_VALUE_KEY = "mystringvalue";
+
     private UserInterfaceConstants() {
     }
 

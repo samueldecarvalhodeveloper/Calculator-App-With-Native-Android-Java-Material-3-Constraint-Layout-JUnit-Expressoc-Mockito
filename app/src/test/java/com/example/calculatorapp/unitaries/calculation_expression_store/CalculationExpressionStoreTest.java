@@ -1,6 +1,6 @@
 package com.example.calculatorapp.unitaries.calculation_expression_store;
 
-import static com.example.calculatorapp.constants.ApplicationConstants.APPLICATION_SHARED_PREFERENCES_NAME;
+import static com.example.calculatorapp.constants.ApplicationConstants.APPLICATION_KEY_VALUE_DATABASE_NAME;
 import static com.example.calculatorapp.constants.UserInterfaceConstants.LAST_SESSION_CALCULATION_EXPRESSION_KEY;
 import static com.example.calculatorapp.constants.domains.CalculatorConstants.SIMPLE_CALCULATION_EXPRESSION;
 import static org.junit.Assert.assertEquals;
@@ -34,7 +34,7 @@ public class CalculationExpressionStoreTest {
         emptyMap = new HashMap<>();
         mapWithWantedValue = new HashMap<String, Object>();
 
-        when(context.getSharedPreferences(APPLICATION_SHARED_PREFERENCES_NAME, Context.MODE_PRIVATE)).thenReturn(sharedPreferences);
+        when(context.getSharedPreferences(APPLICATION_KEY_VALUE_DATABASE_NAME, Context.MODE_PRIVATE)).thenReturn(sharedPreferences);
 
     }
 

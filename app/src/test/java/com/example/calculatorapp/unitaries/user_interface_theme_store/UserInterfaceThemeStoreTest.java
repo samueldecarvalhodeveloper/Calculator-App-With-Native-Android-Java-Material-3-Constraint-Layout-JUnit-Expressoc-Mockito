@@ -1,6 +1,6 @@
 package com.example.calculatorapp.unitaries.user_interface_theme_store;
 
-import static com.example.calculatorapp.constants.ApplicationConstants.APPLICATION_SHARED_PREFERENCES_NAME;
+import static com.example.calculatorapp.constants.ApplicationConstants.APPLICATION_KEY_VALUE_DATABASE_NAME;
 import static com.example.calculatorapp.constants.UserInterfaceConstants.THEME_KEY;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
@@ -41,7 +41,7 @@ public class UserInterfaceThemeStoreTest {
 
         mapWithTrueThemeState.put(THEME_KEY, true);
 
-        when(context.getSharedPreferences(APPLICATION_SHARED_PREFERENCES_NAME, Context.MODE_PRIVATE)).thenReturn(sharedPreferences);
+        when(context.getSharedPreferences(APPLICATION_KEY_VALUE_DATABASE_NAME, Context.MODE_PRIVATE)).thenReturn(sharedPreferences);
         when(sharedPreferences.getAll()).thenReturn(mapWithTrueThemeState);
         when(sharedPreferences.edit()).thenReturn(sharedPreferencesEditor);
         when(sharedPreferences.edit().putBoolean(anyString(), anyBoolean())).thenReturn(sharedPreferencesEditor);

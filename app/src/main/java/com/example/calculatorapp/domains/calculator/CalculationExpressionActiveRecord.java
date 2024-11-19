@@ -2,7 +2,7 @@ package com.example.calculatorapp.domains.calculator;
 
 import static com.example.calculatorapp.domains.calculator.infrastructure.formatters.CalculatorFormatter.getCalculationExpressionWithoutLastCharacter;
 
-import com.example.calculatorapp.domains.calculator.infrastructure.anticorruption_layer.ExpressionEvaluater;
+import com.example.calculatorapp.domains.calculator.infrastructure.anticorruption_layer.ExpressionEvaluator;
 
 public class CalculationExpressionActiveRecord {
     private final CalculationExpressionRegister calculationExpressionRegister;
@@ -32,7 +32,7 @@ public class CalculationExpressionActiveRecord {
 
     public void evaluateCalculationExpression() {
         String currentCalculationExpression = calculationExpressionRegister.getCalculationExpression();
-        String evaluatedCalculationExpression = ExpressionEvaluater.getEvaluatedCalculationExpression(currentCalculationExpression);
+        String evaluatedCalculationExpression = ExpressionEvaluator.getEvaluatedCalculationExpression(currentCalculationExpression);
 
         calculationExpressionRegister.setCalculationExpression(evaluatedCalculationExpression);
     }

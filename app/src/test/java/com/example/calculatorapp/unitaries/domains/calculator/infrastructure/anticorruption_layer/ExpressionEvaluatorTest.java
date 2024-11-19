@@ -4,12 +4,12 @@ import static com.example.calculatorapp.constants.domains.CalculatorConstants.EV
 import static com.example.calculatorapp.constants.domains.CalculatorConstants.NOT_VALID_EXPRESSION;
 import static com.example.calculatorapp.constants.domains.CalculatorConstants.NOT_VALID_EXPRESSION_EXCEPTION_MESSAGE;
 import static com.example.calculatorapp.constants.domains.CalculatorConstants.SIMPLE_CALCULATION_EXPRESSION;
-import static com.example.calculatorapp.domains.calculator.infrastructure.anticorruption_layer.ExpressionEvaluater.getEvaluatedCalculationExpression;
+import static com.example.calculatorapp.domains.calculator.infrastructure.anticorruption_layer.ExpressionEvaluator.getEvaluatedCalculationExpression;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-public class ExpressionEvaluaterTest {
+public class ExpressionEvaluatorTest {
     @Test
     public void testIfMethodGetEvaluatedCalculationExpressionReturnsEvaluatedExpression() {
         String evaluatedExpression = getEvaluatedCalculationExpression(SIMPLE_CALCULATION_EXPRESSION);

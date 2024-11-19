@@ -1,6 +1,6 @@
 package com.example.calculatorapp.unitaries.infrastructure.anticorruption_layer;
 
-import static com.example.calculatorapp.constants.ApplicationConstants.APPLICATION_SHARED_PREFERENCES_NAME;
+import static com.example.calculatorapp.constants.ApplicationConstants.APPLICATION_KEY_VALUE_DATABASE_NAME;
 import static com.example.calculatorapp.constants.UserInterfaceConstants.BOOLEAN_VALUE;
 import static com.example.calculatorapp.constants.UserInterfaceConstants.BOOLEAN_VALUE_KEY;
 import static com.example.calculatorapp.constants.UserInterfaceConstants.LAST_SESSION_CALCULATION_EXPRESSION_KEY;
@@ -46,7 +46,7 @@ public class KeyValueDatabaseTest {
         mapWithWantedValue = new HashMap<String, Object>();
         mapWithAllWantedValue = new HashMap<>();
 
-        when(context.getSharedPreferences(APPLICATION_SHARED_PREFERENCES_NAME, Context.MODE_PRIVATE)).thenReturn(sharedPreferences);
+        when(context.getSharedPreferences(APPLICATION_KEY_VALUE_DATABASE_NAME, Context.MODE_PRIVATE)).thenReturn(sharedPreferences);
 
     }
 
@@ -85,20 +85,20 @@ public class KeyValueDatabaseTest {
     public void testIfMethodSetValueAddsToChoseKeyWantedValue() {
         when(
                 context
-                        .getSharedPreferences(APPLICATION_SHARED_PREFERENCES_NAME, Context.MODE_PRIVATE))
+                        .getSharedPreferences(APPLICATION_KEY_VALUE_DATABASE_NAME, Context.MODE_PRIVATE))
                 .thenReturn(sharedPreferences
                 );
         when(
                 context
                         .getSharedPreferences
-                                (APPLICATION_SHARED_PREFERENCES_NAME, Context.MODE_PRIVATE)
+                                (APPLICATION_KEY_VALUE_DATABASE_NAME, Context.MODE_PRIVATE)
                         .edit())
                 .thenReturn(sharedPreferencesEditor);
         when(
 
                 context
                         .getSharedPreferences(
-                                APPLICATION_SHARED_PREFERENCES_NAME
+                                APPLICATION_KEY_VALUE_DATABASE_NAME
                                 , Context.MODE_PRIVATE
                         )
                         .edit()
@@ -108,7 +108,7 @@ public class KeyValueDatabaseTest {
         when(
                 context
                         .getSharedPreferences(
-                                APPLICATION_SHARED_PREFERENCES_NAME,
+                                APPLICATION_KEY_VALUE_DATABASE_NAME,
                                 Context.MODE_PRIVATE
                         )
                         .edit()

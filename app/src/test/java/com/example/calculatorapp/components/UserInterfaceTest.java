@@ -1,6 +1,6 @@
 package com.example.calculatorapp.components;
 
-import static com.example.calculatorapp.constants.ApplicationConstants.APPLICATION_SHARED_PREFERENCES_NAME;
+import static com.example.calculatorapp.constants.ApplicationConstants.APPLICATION_KEY_VALUE_DATABASE_NAME;
 import static com.example.calculatorapp.constants.UserInterfaceConstants.LAST_SESSION_CALCULATION_EXPRESSION_KEY;
 import static com.example.calculatorapp.constants.UserInterfaceConstants.THEME_KEY;
 import static com.example.calculatorapp.constants.domains.CalculatorConstants.EVALUATED_SIMPLE_CALCULATION_EXPRESSION;
@@ -48,7 +48,7 @@ public class UserInterfaceTest {
         mapWithStoredCalculationExpression.put(LAST_SESSION_CALCULATION_EXPRESSION_KEY, EVALUATED_SIMPLE_CALCULATION_EXPRESSION);
         mapWithStoredCalculationExpression.put(THEME_KEY, true);
 
-        when(context.getSharedPreferences(APPLICATION_SHARED_PREFERENCES_NAME, Context.MODE_PRIVATE)).thenReturn(sharedPreferences);
+        when(context.getSharedPreferences(APPLICATION_KEY_VALUE_DATABASE_NAME, Context.MODE_PRIVATE)).thenReturn(sharedPreferences);
 
         when(sharedPreferences.getAll()).thenReturn(mapWithStoredCalculationExpression);
     }

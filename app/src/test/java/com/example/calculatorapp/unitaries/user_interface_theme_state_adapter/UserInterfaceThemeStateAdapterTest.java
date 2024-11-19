@@ -1,6 +1,6 @@
 package com.example.calculatorapp.unitaries.user_interface_theme_state_adapter;
 
-import static com.example.calculatorapp.constants.ApplicationConstants.APPLICATION_SHARED_PREFERENCES_NAME;
+import static com.example.calculatorapp.constants.ApplicationConstants.APPLICATION_KEY_VALUE_DATABASE_NAME;
 import static com.example.calculatorapp.constants.UserInterfaceConstants.THEME_KEY;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -46,7 +46,7 @@ public class UserInterfaceThemeStateAdapterTest {
         mapWithTrueThemeStateValue.put(THEME_KEY, true);
         mapWithFalseThemeStateValue.put(THEME_KEY, false);
 
-        when(context.getSharedPreferences(APPLICATION_SHARED_PREFERENCES_NAME, Context.MODE_PRIVATE)).thenReturn(sharedPreferences);
+        when(context.getSharedPreferences(APPLICATION_KEY_VALUE_DATABASE_NAME, Context.MODE_PRIVATE)).thenReturn(sharedPreferences);
         when(context.getSystemService(Context.UI_MODE_SERVICE)).thenReturn(uiModeManager);
         when(((UiModeManager) context.getSystemService(Context.UI_MODE_SERVICE)).getNightMode()).thenReturn(UiModeManager.MODE_NIGHT_NO);
         when(sharedPreferences.getAll()).thenReturn(mapWithTrueThemeStateValue);

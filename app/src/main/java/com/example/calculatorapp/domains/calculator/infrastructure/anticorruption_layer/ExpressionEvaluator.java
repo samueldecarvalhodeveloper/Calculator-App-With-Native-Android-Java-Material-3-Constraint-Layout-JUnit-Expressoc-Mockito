@@ -5,8 +5,8 @@ import static com.example.calculatorapp.domains.calculator.infrastructure.specif
 
 import net.objecthunter.exp4j.ExpressionBuilder;
 
-public class ExpressionEvaluater {
-    private ExpressionEvaluater() {
+public class ExpressionEvaluator {
+    private ExpressionEvaluator() {
     }
 
     public static String getEvaluatedCalculationExpression(String calculationExpression) {
