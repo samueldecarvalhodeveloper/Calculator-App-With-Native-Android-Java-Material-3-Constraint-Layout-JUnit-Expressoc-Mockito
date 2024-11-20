@@ -20,8 +20,11 @@ public class CalculatorTest {
     @BeforeClass
     public static void beforeAll() {
         CalculationExpression calculationExpression = new CalculationExpression("");
-        CalculationExpressionRegister calculationExpressionRegister = new CalculationExpressionRegister(calculationExpression);
-        calculationExpressionActiveRecord = new CalculationExpressionActiveRecordDecorator(calculationExpressionRegister);
+        CalculationExpressionRegister calculationExpressionRegister =
+                new CalculationExpressionRegister(calculationExpression);
+        calculationExpressionActiveRecord =
+                new CalculationExpressionActiveRecordDecorator(calculationExpressionRegister);
+
         calculator = new Calculator(calculationExpressionActiveRecord);
     }
 

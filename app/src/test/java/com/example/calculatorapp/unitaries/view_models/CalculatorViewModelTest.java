@@ -20,7 +20,7 @@ import org.junit.Test;
 
 public class CalculatorViewModelTest {
     public static CalculatorViewModel calculatorViewModel;
-    public static MutableLiveData calculationExpressionLiveData;
+    public static MutableLiveData<String> calculationExpressionLiveData;
     public static Context context;
 
     @BeforeClass

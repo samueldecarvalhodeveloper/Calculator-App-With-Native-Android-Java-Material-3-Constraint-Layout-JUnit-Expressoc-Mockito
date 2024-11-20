@@ -57,5 +57,7 @@ dependencies {
     implementation(libs.hilt.android)
     annotationProcessor(libs.hilt.android.compiler)
     testImplementation(libs.junit)
-    testImplementation(libs.robolectric)
+    androidTestImplementation(libs.espresso.core)
+    androidTestImplementation(libs.runner.v161)
+    androidTestImplementation(libs.rules)
 }

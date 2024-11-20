@@ -22,7 +22,9 @@ public class CalculationExpressionActiveRecordDecoratorTest {
     public static void beforeAll() {
         CalculationExpression calculationExpression = new CalculationExpression("");
         calculationExpressionRegister = new CalculationExpressionRegister(calculationExpression);
-        calculationExpressionActiveRecordDecorator = new CalculationExpressionActiveRecordDecorator(calculationExpressionRegister);
+
+        calculationExpressionActiveRecordDecorator =
+                new CalculationExpressionActiveRecordDecorator(calculationExpressionRegister);
     }
 
     @Before

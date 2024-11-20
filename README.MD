@@ -1,7 +1,7 @@
 ![](./thumbnail.jpg)
 
 <h1 align="center">
-Calculator App With Native Android, Java, Material 3, Constraint Layout, JUnit, Robolectric, Mockito
+Calculator App With Native Android, Java, Material 3, Constraint Layout, JUnit, Espresso, Mockito
 </h1>
 
 <br/>
@@ -29,7 +29,7 @@ Calculator App With Native Android, Java, Material 3, Constraint Layout, JUnit, 
 - Android XML
 - Constraint Layout
 - JUnit
-- Robolectric
+- Espresso
 - Exp4j
 - Mockito
 - Dagger 2
@@ -64,4 +64,4 @@ See more:
 
 <p align="center"><strong>Repository Link:</strong></p>
 
-[https://github.com/samueldecarvalhodeveloper/Calculator-App-With-Native-Android-Java-Material-3-Constraint-Layout-JUnit-Robolectric-Mockito](https://github.com/samueldecarvalhodeveloper/Calculator-App-With-Native-Android-Java-Material-3-Constraint-Layout-JUnit-Robolectric-Mockito)
+[https://github.com/samueldecarvalhodeveloper/Calculator-App-With-Native-Android-Java-Material-3-Constraint-Layout-JUnit-Espresso-Mockito](https://github.com/samueldecarvalhodeveloper/Calculator-App-With-Native-Android-Java-Material-3-Constraint-Layout-JUnit-Espresso-Mockito)

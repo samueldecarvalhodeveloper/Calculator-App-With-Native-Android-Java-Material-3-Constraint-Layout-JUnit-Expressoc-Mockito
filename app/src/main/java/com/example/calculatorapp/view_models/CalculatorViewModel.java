@@ -49,6 +49,7 @@ public class CalculatorViewModel extends ViewModel {
         String currentCalculationExpression = calculator.getCalculationExpression();
 
         calculationExpression.setValue(currentCalculationExpression);
+        
         CalculationExpressionStore.setStoredCalculationExpression(
                 currentCalculationExpression,
                 context
@@ -61,6 +62,7 @@ public class CalculatorViewModel extends ViewModel {
         String currentCalculationExpression = calculator.getCalculationExpression();
 
         calculationExpression.setValue(currentCalculationExpression);
+
         CalculationExpressionStore.setStoredCalculationExpression(
                 currentCalculationExpression,
                 context
@@ -73,6 +75,7 @@ public class CalculatorViewModel extends ViewModel {
         String currentCalculationExpression = calculator.getCalculationExpression();
 
         calculationExpression.setValue(currentCalculationExpression);
+
         CalculationExpressionStore.setStoredCalculationExpression(
                 currentCalculationExpression,
                 context
@@ -90,7 +93,8 @@ public class CalculatorViewModel extends ViewModel {
                 context.getString(R.string.not_valid_expression_message) :
                 currentCalculationExpression);
 
-        CalculationExpressionStore.setStoredCalculationExpression(currentCalculationExpression,
+        CalculationExpressionStore.setStoredCalculationExpression(
+                currentCalculationExpression,
                 context
         );
     }

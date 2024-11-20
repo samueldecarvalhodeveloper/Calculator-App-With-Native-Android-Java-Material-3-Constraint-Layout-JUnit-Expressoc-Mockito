@@ -34,8 +34,8 @@ public class CalculationExpressionStoreTest {
         emptyMap = new HashMap<>();
         mapWithWantedValue = new HashMap<String, Object>();
 
-        when(context.getSharedPreferences(APPLICATION_KEY_VALUE_DATABASE_NAME, Context.MODE_PRIVATE)).thenReturn(sharedPreferences);
-
+        when(context.getSharedPreferences(APPLICATION_KEY_VALUE_DATABASE_NAME, Context.MODE_PRIVATE))
+                .thenReturn(sharedPreferences);
     }
 
     @Test

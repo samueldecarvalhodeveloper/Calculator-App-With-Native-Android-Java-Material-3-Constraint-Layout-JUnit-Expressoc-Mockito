@@ -18,6 +18,7 @@ public class CalculationExpressionRegisterTest {
     @BeforeClass
     public static void beforeAll() {
         calculationExpression = new CalculationExpression("");
+
         calculationExpressionRegister = new CalculationExpressionRegister(calculationExpression);
     }
 
