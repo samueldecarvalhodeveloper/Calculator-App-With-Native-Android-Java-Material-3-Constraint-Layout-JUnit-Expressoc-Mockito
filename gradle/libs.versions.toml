@@ -16,6 +16,7 @@ robolectric = "4.12"
 runner = "1.6.2"
 gradle = "8.6.0"
 runnerVersion = "1.6.1"
+rxjava = "3.1.6"
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -35,6 +36,7 @@ rules = { module = "androidx.test:rules", version.ref = "runnerVersion" }
 runner = { module = "androidx.test:runner", version.ref = "runner" }
 gradle = { module = "com.android.tools.build:gradle", version.ref = "gradle" }
 runner-v161 = { module = "androidx.test:runner", version.ref = "runnerVersion" }
+rxjava = { module = "io.reactivex.rxjava3:rxjava", version.ref = "rxjava" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

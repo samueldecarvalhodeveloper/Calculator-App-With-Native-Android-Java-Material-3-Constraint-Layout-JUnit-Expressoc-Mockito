@@ -16,6 +16,8 @@ import com.example.calculatorapp.domains.calculator.CalculatorCharacters;
 import javax.inject.Inject;
 
 import dagger.hilt.android.lifecycle.HiltViewModel;
+import io.reactivex.rxjava3.core.Completable;
+import io.reactivex.rxjava3.schedulers.Schedulers;
 
 @HiltViewModel
 public class CalculatorViewModel extends ViewModel {
@@ -44,58 +46,78 @@ public class CalculatorViewModel extends ViewModel {
     }
 
     public void addCharacter(CalculatorCharacters calculatorCharacters, Context context) {
-        calculator.addCharacter(calculatorCharacters);
+        Completable.fromAction(() -> {
+                    calculator.addCharacter(calculatorCharacters);
 
-        String currentCalculationExpression = calculator.getCalculationExpression();
+                    String currentCalculationExpression = calculator.getCalculationExpression();
 
-        calculationExpression.setValue(currentCalculationExpression);
-        
-        CalculationExpressionStore.setStoredCalculationExpression(
-                currentCalculationExpression,
-                context
-        );
+                    calculationExpression.postValue(currentCalculationExpression);
+
+                    CalculationExpressionStore.setStoredCalculationExpression(
+                            currentCalculationExpression,
+                            context
+                    );
+                })
+                .subscribeOn(Schedulers.computation())
+                .observeOn(Schedulers.computation())
+                .subscribe();
     }
 
     public void backspace(Context context) {
-        calculator.backspace();
+        Completable.fromAction(() -> {
+                    calculator.backspace();
 
-        String currentCalculationExpression = calculator.getCalculationExpression();
+                    String currentCalculationExpression = calculator.getCalculationExpression();
 
-        calculationExpression.setValue(currentCalculationExpression);
+                    calculationExpression.postValue(currentCalculationExpression);
 
-        CalculationExpressionStore.setStoredCalculationExpression(
-                currentCalculationExpression,
-                context
-        );
+                    CalculationExpressionStore.setStoredCalculationExpression(
+                            currentCalculationExpression,
+                            context
+                    );
+                })
+                .subscribeOn(Schedulers.computation())
+                .observeOn(Schedulers.computation())
+                .subscribe();
     }
 
     public void clean(Context context) {
-        calculator.clean();
+        Completable.fromAction(() -> {
+                    calculator.clean();
 
-        String currentCalculationExpression = calculator.getCalculationExpression();
+                    String currentCalculationExpression = calculator.getCalculationExpression();
 
-        calculationExpression.setValue(currentCalculationExpression);
+                    calculationExpression.postValue(currentCalculationExpression);
 
-        CalculationExpressionStore.setStoredCalculationExpression(
-                currentCalculationExpression,
-                context
-        );
+                    CalculationExpressionStore.setStoredCalculationExpression(
+                            currentCalculationExpression,
+                            context
+                    );
+                })
+                .subscribeOn(Schedulers.computation())
+                .observeOn(Schedulers.computation())
+                .subscribe();
     }
 
     public void evaluate(Context context) {
-        calculator.evaluate();
+        Completable.fromAction(() -> {
+                    calculator.evaluate();
 
-        String currentCalculationExpression = calculator.getCalculationExpression();
+                    String currentCalculationExpression = calculator.getCalculationExpression();
 
-        calculationExpression.setValue(isCalculationExpressionNotValidExpressionExceptionMessage(
-                currentCalculationExpression
-        ) ?
-                context.getString(R.string.not_valid_expression_message) :
-                currentCalculationExpression);
+                    calculationExpression.postValue(isCalculationExpressionNotValidExpressionExceptionMessage(
+                            currentCalculationExpression
+                    ) ?
+                            context.getString(R.string.not_valid_expression_message) :
+                            currentCalculationExpression);
 
-        CalculationExpressionStore.setStoredCalculationExpression(
-                currentCalculationExpression,
-                context
-        );
+                    CalculationExpressionStore.setStoredCalculationExpression(
+                            currentCalculationExpression,
+                            context
+                    );
+                })
+                .subscribeOn(Schedulers.computation())
+                .observeOn(Schedulers.computation())
+                .subscribe();
     }
 }

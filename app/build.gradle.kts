@@ -60,4 +60,5 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
     androidTestImplementation(libs.runner.v161)
     androidTestImplementation(libs.rules)
+    implementation(libs.rxjava)
 }
