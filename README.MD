@@ -33,6 +33,7 @@ Calculator App With Native Android, Java, Material 3, Constraint Layout, JUnit, 
 - Exp4j
 - Mockito
 - Dagger 2
+- RxJava 3
 - Android Hilt
 - Shared Preferences
 - Gradle (Kotlin DSL)
